@@ -13,6 +13,13 @@
       }
    }
 .container{
+   .navbar__menu{
+margin: auto 0;
+display: none;
+    /* height: 100%; */
+    /* text-align: center; */
+    font-size: 12px;
+}
    .imageDom__offer{
       animation-name: popup-show;
       animation-duration: 2s;
@@ -26,7 +33,8 @@ margin: 10px;
       }
       .navbar__3{
       display: flex;
-    gap: 10px;
+    gap: 5px;
+    margin-left: 10px;
     align-items: center;
       }
       z-index: 1;
@@ -122,9 +130,9 @@ padding: 4px 0;
      }
      .top-picks, .popular-sec{
       .course-sec{
-display: flex;
+            display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            /* gap: 30px; */
             justify-content: space-around;
       }
           margin: 10px;
@@ -136,8 +144,9 @@ display: flex;
             font-size: 12px;
           }
           .course-sec__course{
-               width: 260px;
-            margin-top: 10px;
+                          flex-basis: 20%;
+            /* flex-grow: 1; */
+            margin: 5px;
     img{
       width: 100%;
       height: 150px;
@@ -180,6 +189,12 @@ margin: 10px 0;
    }
 }
 .header-sec-right_learning{
+   &:not(p){
+
+      white-space: nowrap;
+   }
+}
+.header-sec-right_learning{
    position: relative;
    cursor: pointer;
    &:hover p{
@@ -196,4 +211,28 @@ margin: 10px 0;
     display: none;
    }
 }
+   }
+
+   @media screen and (max-width: 800px) {
+      body{
+
+         font-size: 10px;
+      }
+      .section-two{
+         display: none !important;
+      }
+   }
+   @media screen and (max-width: 600px) {
+      .imageDom__offer{
+         left: 19% !important;
+      }
+      .course-sec__course{
+         flex-basis: 40% !important;
+      }
+      .navbar__2, .navbar__3{
+         display: none !important;
+      }
+      .navbar__menu{
+         display: block !important;
+      }
    }
